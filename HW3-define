@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+#define SUM(x,y) ((x)+(y))
+#define MAX(a,b) ((a)>(b)?(a):(b))
+#define MIN(a,b) ((a)<(b)?(a):(b))
+
+#define OS 1
+
+int main(){
+    #ifdef OS
+      #if OS == 1
+       printf("Linux");
+      #elif OS == 2
+        printf("Windows");
+      #elif OS == 3
+        printf("macOS");
+      #endif
+    #else
+    printf(stderr, "OS not defined!");
+    #endif
+    return 0;
+}
