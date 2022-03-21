@@ -3,8 +3,8 @@
 int main(){
     int num, sum = 0;
 
-    while(scanf("%d",&num) != EOF){
-        if(num % 2 == 0 && num >= 10 && num < 100){
+    while(scanf("%d", &num) != EOF){
+        if(num % 2 == 0 && num >= 10 && num <= 99){
             sum += num;
         }
     }
@@ -13,7 +13,7 @@ int main(){
     return 0;
 }
 
-//============================================================
+//-----------------------------------------------------------
 
 #include <stdio.h>
 #include <string.h>
@@ -36,7 +36,61 @@ int main(int argc, char *argv[]){
                     printf("%d\n", num);
                 }
             }else if(strcmp(argv[1], "-negatives") == 0){
-                if(num < 0){
+                if(num < 0){#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]){
+    int num;
+
+    while(scanf("%d", &num) != EOF){
+    	for(int i = 0; i < argc; i++){
+		    if(argc >= 2){
+		        if(strcmp(argv[i], "-evens") == 0 ||  strcmp(argv[i], "-e") == 0){
+		            if(num % 2 == 0){
+		                printf("%d\n", num);
+		            }
+		        }else if(strcmp(argv[i], "-odds") == 0 || strcmp(argv[i], "-o") == 0){
+		            if(num % 2 != 0){
+		                printf("%d\n", num);
+		            }
+		        }else if(strcmp(argv[i], "-positives") == 0 ||  strcmp(argv[i], "-p") == 0){
+		            if(num > 0){
+		                printf("%d\n", num);
+		            }
+		        }else if(strcmp(argv[i], "-negatives") == 0  ||  strcmp(argv[i], "-n") == 0){
+		            if(num < 0){
+		                printf("%d\n", num);
+		            }
+		        }else if(strcmp(argv[i], "-range") == 0  || strcmp(argv[i], "-r") == 0){
+		            if(num >= atoi(argv[i+1]) && num <= atoi(argv[i+2])){
+		                printf("%d\n", num);
+		            }
+		        }
+     		}
+     	}
+        }else{
+        	while((scanf(%d), &num) != EOF){
+            printf("%d\n", num);
+            }
+        }
+    }
+    return 0;
+}
+
+//-------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+#define PI 3.14
+#define CIRCLEAREA(r) r*r*PI
+
+int main(){
+    printf("%.2f\n", CIRCLEAREA(2));
+    printf("%.2f\n", CIRCLEAREA(3));
+
+    return 0;
+}
                     printf("%d\n", num);
                 }
             }
@@ -47,7 +101,7 @@ int main(int argc, char *argv[]){
     return 0;
 }
 
-//=============================================================
+//--------------------------------------------------------------
 
 #include <stdio.h>
 #include <string.h>
@@ -57,46 +111,50 @@ int main(int argc, char *argv[]){
     int num;
 
     while(scanf("%d", &num) != EOF){
-        if(argc >= 2){
-            if(strcmp(argv[1], "-evens") == 0  strcmp(argv[1], "-e") == 0){
-                if(num % 2 == 0){
-                    printf("%d\n", num);
-                }
-            }else if(strcmp(argv[1], "-odds") == 0  strcmp(argv[1], "-o") == 0){
-                if(num % 2 != 0){
-                    printf("%d\n", num);
-                }
-            }else if(strcmp(argv[1], "-positives") == 0  strcmp(argv[1], "-p") == 0){
-                if(num > 0){
-                    printf("%d\n", num);
-                }
-            }else if(strcmp(argv[1], "-negatives") == 0   strcmp(argv[1], "-n") == 0){
-                if(num < 0){
-                    printf("%d\n", num);
-                }
-            }else if(strcmp(argv[1], "-range") == 0  || strcmp(argv[1], "-r") == 0){
-                if(num >= atoi(argv[2]) && num <= atoi(argv[3])){
-                    printf("%d\n", num);
-                }
-            }
+    	for(int i = 0; i < argc; i++){
+		    if(argc >= 2){
+		        if(strcmp(argv[i], "-evens") == 0 ||  strcmp(argv[i], "-e") == 0){
+		            if(num % 2 == 0){
+		                printf("%d\n", num);
+		            }
+		        }else if(strcmp(argv[i], "-odds") == 0 || strcmp(argv[i], "-o") == 0){
+		            if(num % 2 != 0){
+		                printf("%d\n", num);
+		            }
+		        }else if(strcmp(argv[i], "-positives") == 0 ||  strcmp(argv[i], "-p") == 0){
+		            if(num > 0){
+		                printf("%d\n", num);
+		            }
+		        }else if(strcmp(argv[i], "-negatives") == 0  ||  strcmp(argv[i], "-n") == 0){
+		            if(num < 0){
+		                printf("%d\n", num);
+		            }
+		        }else if(strcmp(argv[i], "-range") == 0  || strcmp(argv[i], "-r") == 0){
+		            if(num >= atoi(argv[i+1]) && num <= atoi(argv[i+2])){
+		                printf("%d\n", num);
+		            }
+		        }
+     		}
+     	}
         }else{
+        	while((scanf(%d), &num) != EOF){
             printf("%d\n", num);
+            }
         }
     }
     return 0;
 }
 
-//==========================================================================
+//-------------------------------------------------------------------------------------
 
 #include <stdio.h>
 
 #define PI 3.14
-#define CIRCLEAREA(r)* (r) * (r) * PI
+#define CIRCLEAREA(r) r*r*PI
 
 int main(){
-    printf("%.2f\n", CIRCLEAREA(10));
-    printf("%.2f\n", CIRCLEAREA(20));
-    printf("%.2f\n", CIRCLEAREA(30));
+    printf("%.2f\n", CIRCLEAREA(2));
+    printf("%.2f\n", CIRCLEAREA(3));
 
     return 0;
 }
